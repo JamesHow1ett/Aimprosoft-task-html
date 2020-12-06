@@ -1,0 +1,44 @@
+.instagram {
+  padding: 25px 0 0;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-arrow {
+      &-l {
+        transform: rotate(180deg);
+      }
+    }
+
+    &-text {
+      color: #393939;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin: 0 15px;
+    }
+
+  }
+}
+
+.instagram-slider {
+  margin-top: 32px;
+
+  &__item {
+    max-width: 135px;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__likes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+}
