@@ -1,3 +1,6 @@
 @import './normalize';
+@import '../lib/slick/slick.scss';
 
+// import site block
 @import './blocks/header';
+@import './blocks/promo';

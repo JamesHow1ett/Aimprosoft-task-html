@@ -84,14 +84,18 @@
   }
 
   .main-slider {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 195px;
-    padding: 10px 13px;
-    background-image: url('/images/header-bg.png');
-    background-size: cover;
-    background-position: center center;
+    position: relative;
+
+    &__bg-image {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 195px;
+      padding: 10px 13px;
+      background-image: url('/images/header-bg.png');
+      background-size: cover;
+      background-position: center center;
+    }
 
     &__group {
       display: flex;
@@ -139,6 +143,36 @@
       font-size: 12px;
       letter-spacing: 1.3px;
       color: #000;
+
+      &:hover {
+        background-color: #221f1f;
+        color: #fff;
+      }
+    }
+
+    .slick-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      transform: translateX(140%);
+      display: flex;
+
+      button {
+        font-size: 0;
+        // border: none;
+        padding: 0;
+        height: 14px;
+        width: 14px;
+        border: 1px solid #a6a5a5;
+        border-radius: 50%;
+        margin-left: 3px;
+      }
+
+      .slick-active {
+        button {
+          background-color: #221f1f;
+        }
+      }
     }
   }
 
