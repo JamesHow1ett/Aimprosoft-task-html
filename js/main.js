@@ -1,4 +1,10 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth < 768 || window.outerWidth < 768) {
+    ininMobileSliders();
+  }
+});
+
+function ininMobileSliders () {
   $('.main-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -8,27 +14,9 @@ $(document).ready(function(){
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
+    responsive: []
+  });
 
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-
-        }
-      }
-    ]
-  })
   $('.promo-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -41,25 +29,39 @@ $(document).ready(function(){
     centerPadding: '20px',
     slidesToShow: 1,
     variableWidth: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
+    mobileFirst: true,
+    responsive: []
+  });
 
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
+  $('.instagram-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '20px',
+    slidesToShow: 1,
+    variableWidth: true,
+    mobileFirst: true,
+    responsive: []
+  });
 
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-
-        }
-      }
-    ]
-  })
-})
+  $('.quem-usa-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '20px',
+    slidesToShow: 1,
+    variableWidth: true,
+    mobileFirst: true,
+    responsive: []
+  });
+}

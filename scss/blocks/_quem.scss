@@ -1,4 +1,4 @@
-.instagram {
+.quem-usa {
   padding: 30px 0 0;
 
   &__title {
@@ -18,21 +18,20 @@
       font-size: 14px;
       margin: 0 15px;
     }
-
   }
 }
 
-.instagram-slider {
+.quem-usa-slider {
   display: flex;
   margin-top: 30px;
 
   &__item {
-    max-width: 135px;
+    max-width: 169px;
     margin-left: 15px;
     filter: opacity(0.4);
 
     &:hover {
-      .instagram-slider__likes {
+      .quem-usa-slider__name {
         display: flex;
       }
     }
@@ -45,7 +44,7 @@
     position: relative;
   }
 
-  &__likes {
+  &__name {
     position: absolute;
     display: none;
     flex-direction: column;
@@ -62,6 +61,6 @@
   }
 }
 
-.instagram-slider__item.slick-slide.slick-current.slick-active.slick-center {
+.quem-usa-slider__item.slick-slide.slick-current.slick-active.slick-center {
   filter: opacity(1);
 }

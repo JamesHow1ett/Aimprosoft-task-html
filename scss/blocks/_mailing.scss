@@ -1,0 +1,44 @@
+.news-mailing {
+  padding: 55px 0 0;
+}
+
+.mailing-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    width: 292px;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    padding: 13px;
+    text-align: center;
+    margin-top: 5px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    background-color: #000;
+
+    &-text {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  &__submit {
+    background-color: #d0d0d0;
+    border-bottom: 2px solid #4f5052;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

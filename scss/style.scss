@@ -1,8 +1,11 @@
 @import './normalize';
-@import '../lib/slick/slick.scss';
+@import '../lib/slick/slick';
 
 // import site block
 @import './blocks/header';
 @import './blocks/promo';
 @import './blocks/category';
 @import './blocks/instagram';
+@import './blocks/quem';
+@import './blocks/mailing';
+@import './blocks/footer';
