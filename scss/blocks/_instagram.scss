@@ -65,3 +65,21 @@
 .instagram-slider__item.slick-slide.slick-current.slick-active.slick-center {
   filter: opacity(1);
 }
+
+@media (min-width: 768px) {
+  .instagram {
+    padding-top: 35px;
+
+    &__title {
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .instagram-slider {
+    &__item {
+      filter: opacity(1);
+    }
+  }
+}

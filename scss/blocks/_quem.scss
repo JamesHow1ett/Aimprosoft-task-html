@@ -64,3 +64,19 @@
 .quem-usa-slider__item.slick-slide.slick-current.slick-active.slick-center {
   filter: opacity(1);
 }
+
+@media (min-width: 768px) {
+  .quem-usa {
+    &__title {
+      &-text {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .quem-usa-slider {
+    &__item {
+      filter: opacity(1);
+    }
+  }
+}
