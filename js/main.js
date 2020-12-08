@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth < 768 || window.outerWidth < 768) {
     ininMobileSliders();
+  } else if ((window.innerWidth >= 768 || window.outerWidth >= 768)
+    && window.innerWidth >= 768 || window.outerWidth >= 768) {
+      destroyMobileSliders();
+      initTabletSliders();
   }
 });
 
@@ -62,6 +66,27 @@ function ininMobileSliders () {
     slidesToShow: 1,
     variableWidth: true,
     mobileFirst: true,
+    responsive: []
+  });
+}
+
+function destroyMobileSliders () {
+  $('.main-slider').on('destroy', function(event, slick){});
+  $('.promo-slider').on('destroy', function(event, slick){});
+  $('.instagram-slider').on('destroy', function(event, slick){});
+  $('.quem-usa-slider').on('destroy', function(event, slick){});
+}
+
+function initTabletSliders () {
+  $('.main-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     responsive: []
   });
 }
