@@ -46,3 +46,57 @@
     }
   }
 }
+
+@media (min-width: 768px) {
+  .category {
+    padding-top: 20px;
+
+    &__divide-img {
+      margin-bottom: 30px;
+    }
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 357px);
+    grid-template-rows: repeat(3, 264px);
+    justify-content: unset;
+  }
+
+  .jaquetas {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 357px;
+  }
+
+  .shorts {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 357px;
+  }
+
+  .corta-vento {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 464px;
+  }
+
+  .camisas {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 250px;
+    justify-self: flex-end;
+  }
+
+  .calcas {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 265px;
+  }
+
+  .camisetas {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 445px;
+    justify-self: flex-end;
+  }
+}

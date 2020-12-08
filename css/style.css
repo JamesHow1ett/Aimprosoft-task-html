@@ -837,6 +837,50 @@ ul, li {
           filter: opacity(1);
 }
 
+.arrow {
+  height: 25px;
+  width: 15px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+}
+
+.arrow-prev {
+  background-image: url("../../images/tablet/chevron-r.png");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+.arrow-next {
+  background-image: url("../../images/tablet/chevron-r.png");
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  .promo {
+    padding-top: 30px;
+  }
+  .promo__title-text {
+    max-width: 210px;
+    font-size: 16px;
+  }
+  .promo-slider {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 10px;
+  }
+  .promo-slider__item {
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
+  }
+  .promo-slider__item[aria-hidden=true] {
+    -webkit-filter: opacity(0.4);
+            filter: opacity(0.4);
+  }
+}
+
 .category {
   padding: 50px 15px 0;
 }
@@ -905,6 +949,80 @@ ul, li {
   font-size: 24px;
   text-transform: uppercase;
   text-shadow: 1px 3px #000;
+}
+
+@media (min-width: 768px) {
+  .category {
+    padding-top: 20px;
+  }
+  .category__divide-img {
+    margin-bottom: 30px;
+  }
+  .category-grid {
+    -ms-grid-columns: (357px)[2];
+        grid-template-columns: repeat(2, 357px);
+    -ms-grid-rows: (264px)[3];
+        grid-template-rows: repeat(3, 264px);
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .jaquetas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    width: 357px;
+  }
+  .shorts {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    width: 357px;
+  }
+  .corta-vento {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    width: 464px;
+  }
+  .camisas {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    width: 250px;
+    justify-self: flex-end;
+  }
+  .calcas {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    width: 265px;
+  }
+  .camisetas {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    width: 445px;
+    justify-self: flex-end;
+  }
 }
 
 .instagram {

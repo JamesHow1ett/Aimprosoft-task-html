@@ -96,3 +96,48 @@
 .promo-slider__item.slick-slide.slick-current.slick-active.slick-center {
   filter: opacity(1);
 }
+
+.arrow {
+  height: 25px;
+  width: 15px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+
+  &-prev {
+    background-image: url('../../images/tablet/chevron-r.png');
+    transform: rotate(180deg);
+    margin-right: 10px;
+  }
+
+  &-next {
+    background-image: url('../../images/tablet/chevron-r.png');
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo {
+    padding-top: 30px;
+
+    &__title {
+      &-text {
+        max-width: 210px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .promo-slider {
+    align-items: center;
+    padding: 0 10px;
+
+    &__item {
+      filter: opacity(1);
+
+      &[aria-hidden=true] {
+        filter: opacity(0.4);
+      }
+    }
+  }
+}
