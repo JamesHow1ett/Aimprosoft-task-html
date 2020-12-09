@@ -2,9 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth < 768 || window.outerWidth < 768) {
     ininMobileSliders();
   } else if ((window.innerWidth >= 768 || window.outerWidth >= 768)
-    && (window.innerWidth < 1400 || window.outerWidth < 1400)) {
+    && (window.innerWidth < 1200 || window.outerWidth < 1200)) {
       destroyMobileSliders();
       initTabletSliders();
+  } else {
+    initDesctopSliders();
   }
 });
 
@@ -98,6 +100,36 @@ function initTabletSliders () {
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
+    prevArrow: '<button type="button" class="slick-prev arrow arrow-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next arrow arrow-next"></button>',
+    responsive: []
+  });
+}
+
+function initDesctopSliders () {
+  $('.main-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    centerMode: true,
+    centerPadding: '20px',
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: []
+  });
+  $('.promo-slider').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToScroll: 2,
+    slidesToShow: 5,
+    variableWidth: true,
     prevArrow: '<button type="button" class="slick-prev arrow arrow-prev"></button>',
     nextArrow: '<button type="button" class="slick-next arrow arrow-next"></button>',
     responsive: []

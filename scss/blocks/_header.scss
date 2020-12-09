@@ -1,11 +1,12 @@
 .conteiner {
-  padding: 11px 9px 15px 13px;
+  
 }
 
 .header-wrapper {
   .header {
     background-color: #000;
     max-height: 50px;
+    padding: 11px 9px 15px 13px;
 
     &__inner {
       display: flex;
@@ -221,11 +222,98 @@
       margin-top: 15px;
       border-width: 2px !important;
     }
+
+    .slick-dots {
+      bottom: 20px !important;
+      left: 50% !important;
+      transform: translateX(-40%) !important;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .conteiner {
+    min-width: 1233px;
+  }
+  .header-wrapper {
+    grid-template-columns: minmax(1200px, 1980px);
+    grid-template-rows: 725px 50px;
   }
 
-  .slick-dots {
-    bottom: 20px !important;
-    left: 333px !important;
-    transform: translateX(0%) !important;
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-slider {
+    display: flex !important;
+    justify-content: center;
+
+    &__bg-image {
+      background-image: url('/images/header-bg.png') !important;
+      min-height: 705px !important;
+      padding: 20px 337px !important;
+    }
+
+    &__group {
+      min-width: 315px !important;
+    }
+
+    &__title {
+      font-size: 28px !important;
+
+      &::after {
+        width: 250px !important;
+      }
+    }
+
+    &__subtitle {
+      margin-top: 15px !important;
+      font-size: 18px !important;
+    }
+
+    &__btn {
+      height: 35px !important;
+      width: 114px !important;
+      margin-top: 35px;
+      text-align: center;
+      padding: 10px 13px !important;
+    }
+  }
+
+  .sale-slider {
+    &__wrapper {
+      max-width: 1233px;
+      height: 20px;
+    }
+
+    .slick-dots {
+      display: flex;
+      align-items: center;
+
+      button {
+        font-size: 0;
+        background-color: #c5c5c5;
+        padding: 0;
+        height: 10px;
+        width: 10px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-left: 3px;
+      }
+
+      .slick-active {
+        button {
+          background-color: #221f1f;
+        }
+      }
+    }
+
+    .sale-slider__wrapper.slick-slide.slick-current.slick-active,
+    .sale-slider__wrapper.slick-slide {
+      display: flex;
+      align-items: center;
+    }
+
   }
 }

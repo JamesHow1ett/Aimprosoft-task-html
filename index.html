@@ -8,23 +8,25 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <!-- header -->
-    <div class="header-wrapper">
-      <header class="header">
-        <div class="conteiner">
-          <div class="header__inner">
-            <nav class="menu">
-              <button class="menu__btn"></button>
-            </nav>
-            <h1 class="header__title">Cloth & Fashion</h1>
-            <div class="header__cart" data-in-cart="88">
-              <img src="./images/cart-icon.png" alt="cart icon" class="header__cart-img">
-            </div>
+  <div class="modal-menu"></div>
+  <div class="modal-cart"></div>
+  <!-- header -->
+  <div class="header-wrapper">
+    <header class="header">
+      <div class="conteiner">
+        <div class="header__inner">
+          <nav class="menu">
+            <button class="menu__btn"></button>
+          </nav>
+          <h1 class="header__title">Cloth & Fashion</h1>
+          <div class="header__cart" data-in-cart="88">
+            <img src="./images/cart-icon.png" alt="cart icon" class="header__cart-img">
           </div>
         </div>
-      </header>
-      <div class="header-sliders-wrapper">
+      </div>
+    </header>
+    <div class="header-sliders-wrapper">
+      <div class="container">
         <div class="sale-slider">
           <span class="sale-slider__name">Frete gratic&nbsp;</span>
           <span class="sale-slider__discr">Para compras acima de r$<span  class="sale-slider__price">300,00</span></span>
@@ -70,16 +72,35 @@
         <!-- end of slider items -->
       </div>
     </div>
-    <!-- end of header -->
+  </div>
+  <!-- end of header -->
 
-    <!-- promo section -->
-    <section class="promo">
+  <!-- promo section -->
+  <section class="promo">
+    <div class="container">
       <div class="promo__title">
         <img src="./images/promo-arrow-r.png" alt="arrow-left" class="promo__title-arrow promo__title-arrow-l">
         <h3 class="promo__title-text">Produtos em destaque</h3>
         <img src="./images/promo-arrow-r.png" alt="arrow-right" class="promo__title-arrow promo__title-arrow-r">
       </div>
       <div class="promo-slider">
+        <!-- slider item -->
+        <div class="promo-slider__item">
+          <div class="promo-slider__bg-img">
+            <img src="./images/promo-item1.png" alt="promo image" class="promo-slider__img">
+          <div class="promo-slider__details-name-d-none">
+            <div class="promo-slider__details-name"><span>Comprar</span></div>
+          </div>
+          <div class="promo-slider__details-sale-d-none">
+            <div class="promo-slider__details-sale"><span>20%</span></div>
+          </div>
+          </div>
+          <div class="promo-slider__price">
+            <div class="promo-slider__price-old">R$<span>88,88<span></div>
+            <div class="promo-slider__price-new">R$<span>78,88<span></div>
+          </div>
+        </div>
+        <!-- end of slider item -->
         <!-- slider item -->
         <div class="promo-slider__item">
           <div class="promo-slider__bg-img">
@@ -166,11 +187,13 @@
         </div>
         <!-- end of slider item -->
       </div>
-    </section>
-    <!-- end of promo section -->
+    </div>
+  </section>
+  <!-- end of promo section -->
 
-    <!-- category section -->
-    <section class="category">
+  <!-- category section -->
+  <section class="category">
+    <div class="container">
       <div class="category__divide-img">
         <img src="./images/icon-divisoria.png" alt="divede icon">
       </div>
@@ -224,15 +247,17 @@
         </a>
         <!-- end of category item -->
       </div>
-    </section>
-    <!-- end of category section -->
+    </div>
+  </section>
+  <!-- end of category section -->
 
-    <!-- instagram section -->
-    <section class="instagram">
+  <!-- instagram section -->
+  <section class="instagram">
+    <div class="container">
       <div class="instagram__title">
-        <img src="./images/promo-arrow-r.png" alt="arrow-left" class="instagram__title-arrow instagram__title-arrow-l">
+        <img src="./images/promo-arrow-r.png" alt="arrow-left" class="instagram__title-arrow  instagram__title-arrow-l">
         <span class="instagram__title-text">Galeria Do Instagram</span>
-        <img src="./images/promo-arrow-r.png" alt="arrow-right" class="instagram__title-arrow instagram__title-arrow-r">
+        <img src="./images/promo-arrow-r.png" alt="arrow-right" class="instagram__title-arrow   instagram__title-arrow-r">
       </div>
       <div class="instagram-slider">
         <!-- instagram-slider__item -->
@@ -291,15 +316,17 @@
         </div>
         <!-- end of instagram item -->
       </div>
-    </section>
-    <!-- end of instagram section -->
+    </div>
+  </section>
+  <!-- end of instagram section -->
 
-    <!-- quem usa section -->
-    <section class="quem-usa">
+  <!-- quem usa section -->
+  <section class="quem-usa">
+    <div class="container">
       <div class="quem-usa__title">
-        <img src="./images/promo-arrow-r.png" alt="arrow-left" class="quem-usa__title-arrow instagram__title-arrow-l">
+        <img src="./images/promo-arrow-r.png" alt="arrow-left" class="quem-usa__title-arrow   instagram__title-arrow-l">
         <span class="quem-usa__title-text">Quem USA</span>
-        <img src="./images/promo-arrow-r.png" alt="arrow-right" class="quem-usa__title-arrow instagram__title-arrow-r">
+        <img src="./images/promo-arrow-r.png" alt="arrow-right" class="quem-usa__title-arrow  instagram__title-arrow-r">
       </div>
       <!-- quem usa slider -->
       <div class="quem-usa-slider">
@@ -345,45 +372,50 @@
         <!-- end of lsdier item -->
       </div>
       <!-- end of quem usa slide -->
-    </section>
-    <!-- end of quem usa section -->
+    </div>
+  </section>
+  <!-- end of quem usa section -->
 
-    <!-- feadback form section -->
-    <section class="news-mailing">
+  <!-- feadback form section -->
+  <section class="news-mailing">
+    <div class="container">
       <form action="" class="mailing-form">
         <div class="mailing-form__input mailing-form__title">
           <span class="mailing-form__title-text">Newsletter</span>
         </div>
         <input type="text" name="name" placeholder="NOME" class="mailing-form__input mailing-form__name">
-        <input type="text" name="email" placeholder="ENDERECO DE EMAIL" class="mailing-form__input mailing-form__email">
+        <input type="text" name="email" placeholder="ENDERECO DE EMAIL" class="mailing-form__input  mailing-form__email">
         <input type="submit" class="mailing-form__input mailing-form__submit" value="Cadastrar">
       </form>
-    </section>
-    <!-- end of feadback form section -->
-  </div>
+    </div>
+  </section>
+  <!-- end of feadback form section -->
+
 
   <footer class="footer">
-    <div class="footer-mobile">
-      <span class="footer-mobile__text">ene<span class="footer-mobile__text footer-mobile__text_blue">x</span>t</span>
-      <span class="footer-mobile__text footer-mobile__text_grey footer-mobile__text_small">&nbsp;group</span>
-    </div>
-    <div class="footer-home">
-      <div class="footer-nav">
-        <a href="#" class="footer-nav__item">Sobre</a>
-        <a href="#" class="footer-nav__item">Contato</a>
-        <a href="#" class="footer-nav__item">Termos&nbsp;&#38;&nbsp;Condicoes</a>
-        <a href="#" class="footer-nav__item">Politica De Privacidade</a>
+    <div class="container">
+      <div class="footer-mobile">
+        <span class="footer-mobile__text">ene<span class="footer-mobile__text footer-mobile__text_blue">x</span>t</ span>
+        <span class="footer-mobile__text footer-mobile__text_grey footer-mobile__text_small">&nbsp;group</span>
       </div>
-      <div class="footer-links">
-        <a href="#" class="footer-links__item">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="footer-links__item">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="footer-links__item">
-          <i class="fab fa-instagram"></i>
-        </a>
+      <div class="footer-home">
+        <div class="footer-nav">
+          <a href="#" class="footer-nav__item">Sobre</a>
+          <a href="#" class="footer-nav__item">Contato</a>
+          <a href="#" class="footer-nav__item">Termos&nbsp;&#38;&nbsp;Condicoes</a>
+          <a href="#" class="footer-nav__item">Politica De Privacidade</a>
+        </div>
+        <div class="footer-links">
+          <a href="#" class="footer-links__item">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="footer-links__item">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="footer-links__item">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
