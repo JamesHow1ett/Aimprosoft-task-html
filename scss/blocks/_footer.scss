@@ -31,3 +31,46 @@
 .footer-home {
   display: none;
 }
+
+@media (min-width: 768px) {
+  .footer {
+    background-color: #000;
+  }
+
+  .footer-mobile {
+    display: none;
+  }
+
+  .footer-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px 0 20px;
+    height: 35px;
+  }
+
+  .footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 480px;
+
+    &__item {
+      color: #fff;
+      text-transform: uppercase;
+      margin-right: 25px;
+    }
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    &__item {
+      i {
+        color: #fff;
+      }
+    }
+  }
+}
