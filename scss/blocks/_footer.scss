@@ -74,3 +74,30 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .footer {
+    .container {
+      max-width: 1233px;
+      margin: 0 auto;
+    }
+  }
+
+  .footer-nav {
+    &__item {
+      &:hover {
+        color: #9a989a;
+      }
+    }
+  }
+
+  .footer-links {
+    &__item {
+      &:hover {
+        i {
+          color: #9a989a;
+        }
+      }
+    }
+  }
+}

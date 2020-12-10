@@ -99,3 +99,44 @@
     justify-self: flex-end;
   }
 }
+
+@media (min-width: 1200px) {
+  .category {
+    padding-top: 65px;
+
+    .container {
+      max-width: 1233px;
+      margin: 0 auto;
+    }
+
+    &__divide-img {
+      margin-bottom: 37px;
+    }
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 590px);
+    grid-template-rows: repeat(3, 444px);
+    gap: 20px;
+  }
+
+  .jaquetas, .shorts {
+    width: 595px;
+  }
+
+  .corta-vento {
+    width: 762px;
+  }
+
+  .camisas {
+    width: 407px;
+  }
+
+  .calcas {
+    width: 448px;
+  }
+
+  .camisetas {
+    width: 735px;
+  }
+}

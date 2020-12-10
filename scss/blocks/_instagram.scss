@@ -83,3 +83,39 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .instagram {
+    padding-top: 75px;
+
+    .container {
+      max-width: 1233px;
+      margin: 0 auto;
+    }
+  }
+
+  .instagram-slider {
+    justify-content: space-between;
+    margin-top: 45px;
+
+    &__item {
+      max-width: 227px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      &-img {
+        width: 217px;
+      }
+    }
+
+    &__likes {
+      &-img {
+        margin-bottom: 17px;
+      }
+    }
+  }
+}

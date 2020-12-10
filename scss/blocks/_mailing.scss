@@ -83,3 +83,28 @@
 
   }
 }
+
+@media (min-width: 1200px) {
+  .news-mailing {
+    padding: 70px 0 0;
+
+    .container {
+      max-width: 1233px;
+      margin: 0 auto;
+    }
+  }
+
+  .mailing-form {
+    &__input {
+      width: 377px;
+    }
+
+    &__title {
+      width: 210px;
+    }
+
+    &__submit {
+      width: 215px;
+    }
+  }
+}

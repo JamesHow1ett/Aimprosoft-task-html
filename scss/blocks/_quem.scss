@@ -80,3 +80,39 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .quem-usa {
+    padding-top: 55px;
+
+    .container {
+      max-width: 1233px;
+      margin: 0 auto;
+    }
+  }
+
+  .quem-usa-slider {
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &__item {
+      max-width: 285px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &__link {
+      img {
+        width: 285px;
+      }
+    }
+
+    &__name {
+      &-text {
+        font-size: 24px;
+      }
+    }
+  }
+}
