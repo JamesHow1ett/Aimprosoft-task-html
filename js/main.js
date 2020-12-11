@@ -1,9 +1,11 @@
 const menuBtn = document.getElementById('menu-btn');
 const navBar = document.querySelector('.menu');
-const modalWindowMenu = document.querySelector('.modal-window-menu');
+const modalWindowBg = document.querySelector('.modal-window');
+const cartBtn = document.getElementById('cart-btn');
+const headerCart = document.querySelector('.header__cart');
 
 
-const menuDivModal = document.createElement('div');
+const modalWrapper = document.createElement('div');
 const modalMenu = `<div class="open-menu">
                     <div class="open-menu__title">
                       <div class="open-menu__title-text">Menu</div>
@@ -59,7 +61,85 @@ const modalMenu = `<div class="open-menu">
                         <li class="open-menu__item">Item</li>
                       </ul>
                     </div>
-                  </div>`
+                  </div>`;
+                  const cartItems = `<div class="open-cart__item">
+                  <div class="open-cart__item-img">
+                    <img src="./images/cart-item.png" alt="item image">
+                  </div>
+                  <div class="open-cart__item-detail">
+                    <div class="open-cart__detail-top">
+                      <div class="open-cart__detail-name"><span>Nome do Producto</span></div>
+                      <div class="open-cart__detailt-delete">
+                        <button class="open-cart__delete-btn">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="open-cart__detail-bottom">
+                      <div class="open-cart__item-quntity">
+                        <button class="open-cart__quntity-minus">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <span>88</span>
+                        <button class="open-cart__quntity-plus">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                      <div class="open-cart__item-price">R$<span>88,88</span></div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="open-cart__item">
+                  <div class="open-cart__item-img">
+                    <img src="./images/cart-item.png" alt="item image">
+                  </div>
+                  <div class="open-cart__item-detail">
+                    <div class="open-cart__detail-top">
+                      <div class="open-cart__detail-name"><span>Nome do Producto</span></div>
+                      <div class="open-cart__detailt-delete">
+                        <button class="open-cart__delete-btn">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="open-cart__detail-bottom">
+                      <div class="open-cart__item-quntity">
+                        <button class="open-cart__quntity-minus">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <span>88</span>
+                        <button class="open-cart__quntity-plus">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                      <div class="open-cart__item-price">R$<span>88,88</span></div>
+                    </div>
+                  </div>
+                  </div>`;
+const modalCart = `<div class="open-cart">
+                    <div class="open-cart__title">
+                      <div class="open-cart__title-text">Meu Carrinho</div>
+                      <button id="cart-close" class="header__cart-btn" data-in-cart="88">
+                        <img src="./images/cart-icon.png" alt="cart icon"   class="header__cart-img">
+                      </button>
+                    </div>
+                    <div class="open-cart__body">
+                      ${cartItems}
+                    </div>
+                    <div class="open-cart__total">
+                      <div class="open-cart__total-text">Total</div>
+                      <div class="open-cart__number">R$<span>88,88</span></div>
+                    </div>
+                    <div class="open-cart__button-group">
+                      <button class="open-cart__continue">
+                        <span>Continuar</span>
+                        <span>Comprando</span>
+                      </button>
+                      <button class="open-cart__checkout">
+                        <span>Checkout</span>
+                      </button>
+                    </div>
+                  </div>`;
 
 function ininMobileSliders () {
   $('.main-slider').slick({
@@ -188,16 +268,16 @@ function initDesctopSliders () {
 }
 
 const openMenu = () => {
-  modalWindowMenu.style.display = 'block';
-  menuDivModal.innerHTML = modalMenu
-  navBar.append(menuDivModal);
+  modalWindowBg.style.display = 'block';
+  modalWrapper.innerHTML = modalMenu;
+  navBar.append(modalWrapper);
 
   const openMenuModal = document.querySelector('.open-menu');
   openMenuModal.addEventListener('click', (event) => {
     const target = event.target;
 
     if (target.id === 'menu-close' || target.parentNode.id === 'menu-close') {
-      modalWindowMenu.style.display = 'none';
+      modalWindowBg.style.display = 'none';
       openMenuModal.style.display = 'none';
     }
 
@@ -247,7 +327,25 @@ const openMenu = () => {
           return;
       }
     }
-  })
+  });
+}
+
+const openCart = () => {
+  modalWindowBg.style.display = 'block';
+  modalWrapper.innerHTML = modalCart;
+  headerCart.append(modalWrapper);
+
+  const openCartModal = document.querySelector('.open-cart');
+  openCartModal.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if (target.id === 'cart-close' || target.parentNode.id === 'cart-close'
+      || target.classList.contains('open-cart__continue')
+      || target.parentNode.classList.contains('open-cart__continue')) {
+      modalWindowBg.style.display = 'none';
+      openCartModal.style.display = 'none';
+    }
+  });
 }
 
 
@@ -264,5 +362,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   menuBtn.addEventListener('click', openMenu);
-
+  cartBtn.addEventListener('click', openCart);
 });

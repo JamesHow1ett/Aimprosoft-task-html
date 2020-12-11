@@ -1,7 +1,7 @@
-.modal-window-menu {
+.modal-window {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 9997;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -28,6 +28,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
+    padding-left: 15px;
     height: 50px;
     background-color: #000;
 
@@ -44,6 +45,10 @@
 
       i {
         color: #fff;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }
@@ -75,6 +80,10 @@
       i {
         color: #fff;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 
@@ -88,6 +97,10 @@
 
     &:first-child {
       border: none;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -118,4 +131,14 @@
 
 .show {
   display: block !important;
+}
+
+@media (max-width: 320px) {
+  .open-menu {
+    min-width: 250px;
+
+    &__title, &__search, &__menu-item {
+      max-width: 250px;
+    }
+  }
 }
