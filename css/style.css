@@ -512,6 +512,7 @@ body {
 .header-wrapper .header__title {
   color: #fff;
   font-size: 21px;
+  font-family: "Rajdhani-Bold" "Arial" "sans-serif";
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -790,11 +791,46 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .header__title {
+    margin-left: 93px;
+    margin-bottom: 2px;
+    font-size: 28px !important;
+    letter-spacing: -0.7px;
+    -webkit-transform: translate(8px, -6px);
+            transform: translate(8px, -6px);
+  }
   .header__cart-login {
     display: block !important;
     margin-right: 25px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 25px;
+    -webkit-transform: translate(3px, -7px);
+            transform: translate(3px, -7px);
+    letter-spacing: 2px;
+  }
+  .header__cart-btn {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    -webkit-transform: scale(1.18) translate(5px, -5px);
+            transform: scale(1.18) translate(5px, -5px);
+  }
+  .header__cart-btn::before {
+    top: 4px !important;
+    left: 0 !important;
+    padding-top: 2px;
+    font-size: 13px;
+  }
+  .menu__btn {
+    height: 30px !important;
+    width: 30px !important;
+    -webkit-transform: scaleX(1.1) translate(3px, -4px);
+            transform: scaleX(1.1) translate(3px, -4px);
+  }
+  .menu__btn::after {
+    height: 4px !important;
+    -webkit-box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff !important;
+            box-shadow: 0 9px 0 0 #fff, 0 18px 0 0 #fff !important;
   }
   .main-slider {
     display: -webkit-box !important;
@@ -806,8 +842,8 @@ body {
   }
   .main-slider__bg-image {
     background-image: url("/images/header-bg.png") !important;
-    min-height: 705px !important;
-    padding: 20px 337px !important;
+    padding: 30px 337px !important;
+    background-position: center center;
   }
   .main-slider__group {
     min-width: 315px !important;
@@ -829,6 +865,16 @@ body {
     text-align: center;
     padding: 10px 13px !important;
   }
+  .main-slider .slick-dots {
+    left: 50% !important;
+    -webkit-transform: translate(-55%, 15%) !important;
+            transform: translate(-55%, 15%) !important;
+  }
+  .main-slider .slick-dots button {
+    height: 18px !important;
+    width: 18px !important;
+    margin-left: 5px !important;
+  }
   .sale-slider__wrapper {
     max-width: 1233px;
     height: 20px;
@@ -845,8 +891,8 @@ body {
     font-size: 0;
     background-color: #c5c5c5;
     padding: 0;
-    height: 10px;
-    width: 10px;
+    height: 20px !important;
+    width: 20px !important;
     border: 1px solid #000;
     border-radius: 50%;
     margin-left: 3px;
@@ -1046,17 +1092,27 @@ body {
   .container {
     min-width: 1233px;
   }
+  .promo__title-text {
+    max-width: 270px;
+    font-size: 25px;
+    margin: 0 15px;
+  }
+  .promo__title-arrow {
+    width: 74px;
+  }
   .promo-slider {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto;
     width: 1233px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0;
+    min-height: 360px;
+    -webkit-transform: translate(7px, -5px);
+            transform: translate(7px, -5px);
   }
   .promo-slider__item {
-    max-width: 184px;
+    max-width: 185px;
   }
   .promo-slider__item[aria-hidden=true] {
     -webkit-filter: opacity(1);
@@ -1068,12 +1124,20 @@ body {
   .promo-slider__price-old {
     color: #111;
     text-decoration: none;
+    margin-top: 10px;
+    font-family: 'Rajdhani-SemiBold';
+    font-size: 16px;
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
   }
   .promo-slider__price-new {
     display: none;
   }
   .promo-slider .slick-slide img {
-    width: 183px;
+    width: 185px;
+  }
+  .arrow {
+    margin-bottom: 19px;
   }
 }
 
@@ -1723,6 +1787,9 @@ body {
     max-width: 1233px;
     margin: 0 auto;
   }
+  .footer-home {
+    padding: 0;
+  }
   .footer-nav__item:hover {
     color: #9a989a;
   }
@@ -1746,7 +1813,7 @@ body {
 
 .open-menu {
   position: absolute;
-  top: -0.8125em;
+  top: -0.9em;
   z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1760,7 +1827,7 @@ body {
           justify-content: flex-end;
   min-width: 432px;
   border: 2px solid #000;
-  border-top: none;
+  border-top: 1px;
 }
 
 .open-menu__title {

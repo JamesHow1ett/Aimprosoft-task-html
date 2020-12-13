@@ -150,15 +150,30 @@
     min-width: 1233px;
   }
 
+  .promo {
+    &__title {
+      &-text {
+        max-width: 270px;
+        font-size: 25px;
+        margin: 0 15px;
+      }
+
+      &-arrow {
+        width: 74px;
+      }
+    }
+  }
+
   .promo-slider {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 25px auto;
     width: 1233px;
     justify-content: space-between;
     padding: 0;
+    min-height: 360px;
+    transform: translate(7px, -5px);
 
     &__item {
-      max-width: 184px;
+      max-width: 185px;
       // margin-left: 0;
 
       &[aria-hidden=true] {
@@ -176,6 +191,10 @@
       &-old {
         color: #111;
         text-decoration: none;
+        margin-top: 10px;
+        font-family: 'Rajdhani-SemiBold';
+        font-size: 16px;
+        transform: translate(-2px, 2px);
       }
       &-new {
         display: none;
@@ -183,7 +202,11 @@
     }
 
     .slick-slide img {
-      width: 183px;
+      width: 185px;
     }
+  }
+
+  .arrow {
+    margin-bottom: 19px;
   }
 }
