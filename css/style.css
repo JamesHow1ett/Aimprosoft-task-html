@@ -540,6 +540,7 @@ body {
   position: relative;
   border: none;
   background-color: #000;
+  outline: none;
 }
 
 .header-wrapper .header__cart-btn::before {
@@ -1092,6 +1093,10 @@ body {
   .container {
     min-width: 1233px;
   }
+  .promo__title {
+    -webkit-transform: translate(2px, 1px);
+            transform: translate(2px, 1px);
+  }
   .promo__title-text {
     max-width: 270px;
     font-size: 25px;
@@ -1284,7 +1289,7 @@ body {
 
 @media (min-width: 1200px) {
   .category {
-    padding-top: 65px;
+    padding-top: 37px;
   }
   .category .container {
     max-width: 1233px;
@@ -1293,27 +1298,51 @@ body {
   .category__divide-img {
     margin-bottom: 37px;
   }
+  .category__divide-img img {
+    -webkit-transform: scale(1.3) translateX(6px);
+            transform: scale(1.3) translateX(6px);
+  }
   .category-grid {
-    -ms-grid-columns: (590px)[2];
-        grid-template-columns: repeat(2, 590px);
-    -ms-grid-rows: (444px)[3];
-        grid-template-rows: repeat(3, 444px);
+    -ms-grid-columns: (605px)[2];
+        grid-template-columns: repeat(2, 605px);
+    -ms-grid-rows: (450px)[3];
+        grid-template-rows: repeat(3, 450px);
     gap: 20px;
   }
+  .category-grid__category-text {
+    font-size: 34px;
+    letter-spacing: 6px;
+  }
   .jaquetas, .shorts {
-    width: 595px;
+    width: 609px;
+  }
+  .jaquetas {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  .shorts {
+    -webkit-transform: translate(12px, 4px);
+            transform: translate(12px, 4px);
   }
   .corta-vento {
-    width: 762px;
+    width: 780px;
+    -webkit-transform: translate(4px, 6px);
+            transform: translate(4px, 6px);
   }
   .camisas {
-    width: 407px;
+    width: 420px;
+    -webkit-transform: translate(7px, 6px);
+            transform: translate(7px, 6px);
   }
   .calcas {
-    width: 448px;
+    width: 450px;
+    -webkit-transform: translate(4px, 5px);
+            transform: translate(4px, 5px);
   }
   .camisetas {
-    width: 735px;
+    width: 762px;
+    -webkit-transform: translate(11px, 7px);
+            transform: translate(11px, 7px);
   }
 }
 
@@ -1393,7 +1422,7 @@ body {
           justify-content: center;
   height: 100%;
   width: 100%;
-  background-color: rgba(39, 39, 39, 0.7);
+  background-color: rgba(39, 39, 39, 0.8);
 }
 
 .instagram-slider__likes-text {
@@ -1427,6 +1456,18 @@ body {
     max-width: 1233px;
     margin: 0 auto;
   }
+  .instagram__title {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  .instagram__title-arrow {
+    width: 50px;
+  }
+  .instagram__title-text {
+    font-size: 24px;
+    margin: 0 20px;
+    letter-spacing: 1px;
+  }
   .instagram-slider {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1434,16 +1475,23 @@ body {
     margin-top: 45px;
   }
   .instagram-slider__item {
-    max-width: 227px;
+    max-width: 240px;
+    -webkit-transform: translate(4px, -2px);
+            transform: translate(4px, -2px);
   }
   .instagram-slider__item:first-child {
     margin-left: 0;
   }
   .instagram-slider__link-img {
-    width: 217px;
+    width: 227px;
   }
   .instagram-slider__likes-img {
     margin-bottom: 17px;
+  }
+  .instagram-slider__likes-text {
+    font-size: 26px;
+    -webkit-transform: translate(-9px, 6px);
+            transform: translate(-9px, 6px);
   }
 }
 
@@ -1548,26 +1596,38 @@ body {
 
 @media (min-width: 1200px) {
   .quem-usa {
-    padding-top: 55px;
+    padding-top: 50px;
   }
   .quem-usa .container {
     max-width: 1233px;
     margin: 0 auto;
   }
+  .quem-usa__title {
+    -webkit-transform: translate(3px, -3px);
+            transform: translate(3px, -3px);
+  }
+  .quem-usa__title-arrow {
+    width: 70px;
+  }
+  .quem-usa__title-text {
+    font-size: 24px;
+    margin: 0 20px;
+    letter-spacing: 1px;
+  }
   .quem-usa-slider {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 36px;
   }
   .quem-usa-slider__item {
-    max-width: 285px;
+    max-width: 290px;
   }
   .quem-usa-slider__item:first-child {
     margin-left: 0;
   }
   .quem-usa-slider__link img {
-    width: 285px;
+    width: 290px;
   }
   .quem-usa-slider__name-text {
     font-size: 24px;
@@ -1842,7 +1902,7 @@ body {
           justify-content: space-between;
   padding: 10px;
   padding-left: 15px;
-  height: 50px;
+  height: 48px;
   background-color: #000;
 }
 
@@ -2145,6 +2205,11 @@ body {
 .open-cart__checkout span {
   color: #fff;
   text-transform: uppercase;
+}
+
+.cart-modal-btn {
+  -webkit-transform: scale(1.18) translate(0px, 0px);
+          transform: scale(1.18) translate(0px, 0px);
 }
 
 @media (max-width: 768px) {

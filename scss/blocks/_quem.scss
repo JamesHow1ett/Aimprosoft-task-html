@@ -83,20 +83,33 @@
 
 @media (min-width: 1200px) {
   .quem-usa {
-    padding-top: 55px;
+    padding-top: 50px;
 
     .container {
       max-width: 1233px;
       margin: 0 auto;
     }
+
+    &__title {
+      transform: translate(3px, -3px);
+
+      &-arrow {
+        width: 70px;
+      }
+      &-text {
+        font-size: 24px;
+        margin: 0 20px;
+        letter-spacing: 1px;
+      }
+    }
   }
 
   .quem-usa-slider {
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 36px;
 
     &__item {
-      max-width: 285px;
+      max-width: 290px;
 
       &:first-child {
         margin-left: 0;
@@ -105,7 +118,7 @@
 
     &__link {
       img {
-        width: 285px;
+        width: 290px;
       }
     }
 

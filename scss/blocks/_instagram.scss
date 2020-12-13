@@ -53,7 +53,7 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: rgba(39, 39, 39, 0.7);
+    background-color: rgba(39, 39, 39, 0.8);
 
     &-text {
       color: #fff;
@@ -92,6 +92,20 @@
       max-width: 1233px;
       margin: 0 auto;
     }
+
+    &__title {
+      transform: translate(2px, 2px);
+
+      &-arrow {
+        width: 50px;
+      }
+
+      &-text {
+        font-size: 24px;
+        margin: 0 20px;
+        letter-spacing: 1px;
+      }
+    }
   }
 
   .instagram-slider {
@@ -99,7 +113,8 @@
     margin-top: 45px;
 
     &__item {
-      max-width: 227px;
+      max-width: 240px;
+      transform: translate(4px, -2px);
 
       &:first-child {
         margin-left: 0;
@@ -108,13 +123,18 @@
 
     &__link {
       &-img {
-        width: 217px;
+        width: 227px;
       }
     }
 
     &__likes {
       &-img {
         margin-bottom: 17px;
+      }
+
+      &-text {
+        font-size: 26px;
+        transform: translate(-9px, 6px);
       }
     }
   }

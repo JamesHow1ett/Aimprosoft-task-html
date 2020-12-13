@@ -136,6 +136,10 @@
   }
 }
 
+.cart-modal-btn {
+  transform: scale(1.18) translate(0px, 0px);
+}
+
 @media (max-width: 768px) {
   .open-cart {
     left: -390px;

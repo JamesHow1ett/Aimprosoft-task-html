@@ -62,7 +62,7 @@ const modalMenu = `<div class="open-menu">
                       </ul>
                     </div>
                   </div>`;
-                  const cartItems = `<div class="open-cart__item">
+const cartItems = `<div class="open-cart__item">
                   <div class="open-cart__item-img">
                     <img src="./images/cart-item.png" alt="item image">
                   </div>
@@ -119,7 +119,7 @@ const modalMenu = `<div class="open-menu">
 const modalCart = `<div class="open-cart">
                     <div class="open-cart__title">
                       <div class="open-cart__title-text">Meu Carrinho</div>
-                      <button id="cart-close" class="header__cart-btn" data-in-cart="88">
+                      <button id="cart-close" class="header__cart-btn cart-modal-btn" data-in-cart="88">
                         <img src="./images/cart-icon.png" alt="cart icon"   class="header__cart-img">
                       </button>
                     </div>

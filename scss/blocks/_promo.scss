@@ -152,6 +152,8 @@
 
   .promo {
     &__title {
+      transform: translate(2px, 1px);
+      
       &-text {
         max-width: 270px;
         font-size: 25px;

@@ -41,6 +41,7 @@ body {
         position: relative;
         border: none;
         background-color: #000;
+        outline: none;
 
         &::before {
           content: attr(data-in-cart);
