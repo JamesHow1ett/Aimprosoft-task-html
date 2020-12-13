@@ -3,6 +3,11 @@ const navBar = document.querySelector('.menu');
 const modalWindowBg = document.querySelector('.modal-window');
 const cartBtn = document.getElementById('cart-btn');
 const headerCart = document.querySelector('.header__cart');
+const saleSlider = document.querySelector('.sale-slider');
+const saleValueElem = document.querySelector('.sale-slider__price');
+const saleDots = document.querySelectorAll('.sale-slider__dot');
+const saleValueDefault = saleValueElem.textContent;
+const saleValues = [saleValueDefault, '350,00', '250,00'];
 
 
 const modalWrapper = document.createElement('div');
@@ -347,7 +352,6 @@ const openCart = () => {
     }
   });
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth < 768 || window.outerWidth < 768) {

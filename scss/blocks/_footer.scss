@@ -85,10 +85,15 @@
 
   .footer-home {
     padding: 0;
+    height: 40px;
   }
 
   .footer-nav {
+    padding-left: 10px;
+
     &__item {
+      margin-right: 42px;
+
       &:hover {
         color: #9a989a;
       }
@@ -96,7 +101,10 @@
   }
 
   .footer-links {
+    width: 83px;
+    
     &__item {
+      transform: scale(1.5);
       &:hover {
         i {
           color: #9a989a;

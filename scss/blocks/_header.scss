@@ -194,7 +194,8 @@ body {
         padding: 0;
         height: 14px;
         width: 14px;
-        border: 1px solid #a6a5a5;
+        border: 1px solid;
+        border-color: #a6a5a5;
         border-radius: 50%;
         margin-left: 3px;
       }
@@ -202,6 +203,7 @@ body {
       .slick-active {
         button {
           background-color: #221f1f;
+          border-color: #221f1f !important;
         }
       }
     }
@@ -328,80 +330,132 @@ body {
 
     &__bg-image {
       background-image: url('/images/header-bg.png') !important;
-      // min-height: 705px !important;
-      padding: 30px 337px !important;
+      background-size: contain !important;
+      min-height: 705px !important;
+      padding: 30px 360px !important;
       background-position: center center;
     }
 
     &__group {
-      min-width: 315px !important;
+      min-width: 360px !important;
+      transform: translateX(-6px);
     }
 
     &__title {
-      font-size: 28px !important;
+      font-size: 35px !important;
+      margin-top: 0 !important;
+      transform: translateX(-13px);
+      letter-spacing: 1.5px;
+      margin-left: 26px;
+      font-family: "Rajdhani-Medium", "sans-serif";
+      font-weight: 600;
+
+      span {
+        font-family: "Rajdhani-Bold", "sans-serif";
+        font-weight: 700;
+      }
 
       &::after {
-        width: 250px !important;
+        width: 315px !important;
+        transform: translateX(-31px);
+        border-bottom: none;
+        border-color: #000;
       }
     }
 
     &__subtitle {
-      margin-top: 15px !important;
-      font-size: 18px !important;
+      margin-top: 13px !important;
+      font-size: 21px !important;
+      letter-spacing: 3px !important;
+      font-family: "serif";
+      font-weight: 200;
     }
 
     &__btn {
       height: 35px !important;
-      width: 114px !important;
+      width: 118px !important;
       margin-top: 35px;
       text-align: center;
-      padding: 10px 13px !important;
+      padding: 2px 13px !important;
+      transform: translate(-15px, 5px);
+      font-size: 26px !important;
+      letter-spacing: 0px !important;
     }
 
     .slick-dots {
       left: 50% !important;
-      transform: translate(-55%, 15%) !important;
+      transform: translate(-50%, -25%) !important;
       button {
         height: 18px !important;
         width: 18px !important;
         margin-left: 5px !important;
-      }
-    }
-  }
-
-  .sale-slider {
-    &__wrapper {
-      max-width: 1233px;
-      height: 20px;
-    }
-
-    .slick-dots {
-      display: flex;
-      align-items: center;
-
-      button {
-        font-size: 0;
-        background-color: #c5c5c5;
-        padding: 0;
-        height: 20px !important;
-        width: 20px !important;
-        border: 1px solid #000;
-        border-radius: 50%;
-        margin-left: 3px;
+        border-color: #fff !important;
       }
 
-      .slick-active {
-        button {
-          background-color: #221f1f;
+      li {
+        margin-left: 2px;
+
+        &:first-child {
+          margin-left: 0;
         }
       }
     }
+  }
+}
 
-    .sale-slider__wrapper.slick-slide.slick-current.slick-active,
-    .sale-slider__wrapper.slick-slide {
-      display: flex;
-      align-items: center;
+.sale-slider {
+  position: relative;
+
+  &__dots {
+    position: absolute;
+    top: 7px;
+    right: 333px;
+    display: flex;
+  }
+
+  &__dot {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-left: 3px;
+
+    &.active {
+      background-color: #000;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1233px;
+    height: 20px;
+  }
+
+  .slick-dots {
+    display: flex;
+    align-items: center;
+
+    button {
+      font-size: 0;
+      background-color: #c5c5c5;
+      padding: 0;
+      height: 20px !important;
+      width: 20px !important;
+      border: 1px solid #000;
+      border-radius: 50%;
+      margin-left: 3px;
     }
 
+    .slick-active {
+      button {
+        background-color: #221f1f;
+      }
+    }
   }
+
+  .sale-slider__wrapper.slick-slide.slick-current.slick-active,
+  .sale-slider__wrapper.slick-slide {
+    display: flex;
+    align-items: center;
+  }
+
 }
