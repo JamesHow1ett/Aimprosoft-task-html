@@ -19,6 +19,7 @@
     &-text {
       color: #fff;
       text-transform: uppercase;
+      font-size: 24px;
     }
   }
 
@@ -32,7 +33,7 @@
   &__item {
     display: flex;
     border-bottom: 1px solid #c6c6c6;
-    min-height: 80px;
+    max-height: 118px;
 
     &-img {
       width: 67px;
@@ -44,7 +45,6 @@
       justify-content: space-between;
       min-width: 355px;
       padding: 10px 15px;
-
     }
   }
 
@@ -57,6 +57,7 @@
     &-name {
       color: #292929;
       font-size: 20px;
+      font-family: "Rajdhani-SemiBold";
     }
 
     &-bottom {
@@ -69,14 +70,26 @@
     height: 25px;
     width: 30px;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 2px solid #000;
+  }
+
+  &__item-quntity {
+    span {
+      background-color: #d1d1d1;
+      padding: 0 5px;
+    }
+  }
+
+  &__item-price {
+    font-size: 18px;
   }
 
   &__quntity-minus, &__quntity-plus {
     height: 25px;
     width: 30px;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 2px solid #000;
+    line-height: 0.5;
   }
 
   &__total {
@@ -86,10 +99,11 @@
     padding: 0 15px;
     background-color: #dcdcdc;
     min-height: 50px;
-
+    
     &-text {
       color: #292929;
       text-transform: uppercase;
+      font-family: "Rajdhani-SemiBold";
     }
   }
 
@@ -102,6 +116,8 @@
     border: none;
     background-color: #000;
     padding: 0;
+    font-family: "Rajdhani-Bold";
+    font-size: 28px;
   }
 
   &__continue {
@@ -115,7 +131,6 @@
     span {
       color: #b3b3b3;
       text-transform: uppercase;
-      margin-bottom: 10px;
 
       &:last-child {
         margin-bottom: 0;
@@ -128,16 +143,73 @@
     justify-content: flex-start;
     padding: 23px;
     width: 210px;
+    position: relative;
 
     span {
       color: #fff;
       text-transform: uppercase;
+    }
+
+    &::after {
+      position: absolute;
+      content: url('../../images/chevron-r.png');
+      right: 25px;
+      top: 22px;
     }
   }
 }
 
 .cart-modal-btn {
   transform: scale(1.18) translate(0px, 0px);
+}
+
+.check-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+}
+
+.check-container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+.check-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.check-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 
 @media (max-width: 768px) {

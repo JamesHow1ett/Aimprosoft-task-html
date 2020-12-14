@@ -109,7 +109,8 @@
     margin-top: 36px;
 
     &__item {
-      max-width: 290px;
+      max-width: 287px;
+      transform: translate(1px, -3px);
 
       &:first-child {
         margin-left: 0;

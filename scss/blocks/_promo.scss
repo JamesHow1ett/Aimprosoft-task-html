@@ -152,7 +152,7 @@
 
   .promo {
     &__title {
-      transform: translate(2px, 1px);
+      transform: translate(-2px, 2px);
 
       &-text {
         max-width: 270px;
@@ -172,7 +172,7 @@
     justify-content: space-between;
     padding: 0;
     min-height: 360px;
-    transform: translate(7px, -5px);
+    transform: translate(4px, -7px);
 
     &__item {
       max-width: 185px;
@@ -195,7 +195,7 @@
         text-decoration: none;
         margin-top: 5px;
         font-family: 'Rajdhani-SemiBold';
-        font-size: 16px;
+        font-size: 15px;
         transform: translate(-2px, 2px);
       }
       &-new {

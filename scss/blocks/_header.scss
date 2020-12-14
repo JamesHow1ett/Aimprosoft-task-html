@@ -106,8 +106,10 @@ body {
     background-color: #c5c5c5;
     color: #fff;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 400;
+    letter-spacing: 2px;
+    font-family: "Rajdhani-Light", "sans-serif";
 
     &__name {
       font-weight: 700;
@@ -281,7 +283,7 @@ body {
       margin-bottom: 2px;
       font-size: 28px !important;
       letter-spacing: -0.7px;
-      transform: translate(8px, -6px);
+      transform: translate(2px, -5px);
     }
 
     &__cart {
@@ -290,7 +292,7 @@ body {
         margin-right: 25px;
         text-transform: uppercase;
         font-size: 25px;
-        transform: translate(3px, -7px);
+        transform: translate(-2px, -7px);
         letter-spacing: 2px;
       }
 
@@ -298,7 +300,7 @@ body {
         height: 40px;
         width: 40px;
         padding: 0;
-        transform: scale(1.18) translate(5px, -5px);
+        transform: scale(1.18) translate(2px, -5px);
 
         &::before {
           top: 4px !important;
@@ -314,7 +316,7 @@ body {
     &__btn {
       height: 30px !important;
       width: 30px !important;
-      transform: scaleX(1.1) translate(3px, -4px);
+      transform: scaleX(1.1) translate(0px, -5px);
 
       &::after {
         height: 4px !important;

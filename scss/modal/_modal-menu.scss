@@ -14,7 +14,6 @@
 .open-menu {
   position: absolute;
   top: -0.9em;
-  // right: 0;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -22,6 +21,7 @@
   min-width: 432px;
   border: 2px solid #000;
   border-top: 1px;
+  transform: translateX(-2px);
 
   &__title {
     display: flex;
@@ -35,6 +35,7 @@
     &-text {
       color: #fff;
       text-transform: uppercase;
+      font-size: 24px;
     }
 
     &-btn-close {
@@ -88,12 +89,15 @@
   }
 
   &__menu-item {
+    position: relative;
     min-height: 70px;
     background-color: #fff;
     color: #424242;
     padding: 30px 15px;
     border-top: 1px solid #424242;
     text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Rajdhani-Medium", "sans-serif";
 
     &:first-child {
       border: none;
@@ -101,6 +105,26 @@
 
     &:hover {
       cursor: pointer;
+    }
+
+    &.plus {
+      &::after {
+        position: absolute;
+        content: url('../../images/plus.png');
+        height: 13px;
+        width: 13px;
+        right: 25px;
+      }
+    }
+
+    &.minus {
+      &::before {
+        position: absolute;
+        content: url('../../images/minus.png');
+        height: 13px;
+        width: 13px;
+        right: 25px;
+      }
     }
   }
 
@@ -122,9 +146,18 @@
     left: 0;
     margin-left: -15px;
     border-top: 1px solid #fff;
+    position: relative;
 
     &:first-child {
       border-top: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: url('../../images/chevron-r.png');
+      height: 12px;
+      width: 12px;
+      right: 25px;
     }
   }
 }

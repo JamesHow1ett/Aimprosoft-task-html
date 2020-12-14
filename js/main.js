@@ -5,9 +5,12 @@ const cartBtn = document.getElementById('cart-btn');
 const headerCart = document.querySelector('.header__cart');
 const saleSlider = document.querySelector('.sale-slider');
 const saleValueElem = document.querySelector('.sale-slider__price');
-const saleDots = document.querySelectorAll('.sale-slider__dot');
+const saleSliderDiscr = document.querySelector('.sale-slider__discr')
+const saleDots = document.querySelector('.sale-slider__dots');
+const saleDot = document.querySelectorAll('.sale-slider__dot');
 const saleValueDefault = saleValueElem.textContent;
 const saleValues = [saleValueDefault, '350,00', '250,00'];
+const saleDiscrValues = [saleSliderDiscr.textContent, 'Sports & Lifestyle', 'Aimprosoft'];
 
 
 const modalWrapper = document.createElement('div');
@@ -26,7 +29,7 @@ const modalMenu = `<div class="open-menu">
                         <i class="fas fa-search"></i>
                       </button>
                     </div>
-                    <div class="open-menu__menu-item sobre">Sobre
+                    <div class="open-menu__menu-item sobre plus">Sobre
                       <ul class="open-menu__list">
                         <li class="open-menu__item">Item</li>
                         <li class="open-menu__item">Item</li>
@@ -34,7 +37,7 @@ const modalMenu = `<div class="open-menu">
                         <li class="open-menu__item">Item</li>
                       </ul>
                     </div>
-                    <div class="open-menu__menu-item cols">Colecoes
+                    <div class="open-menu__menu-item cols plus">Colecoes
                       <ul class="open-menu__list">
                         <li class="open-menu__item">Item</li>
                         <li class="open-menu__item">Item</li>
@@ -42,7 +45,7 @@ const modalMenu = `<div class="open-menu">
                         <li class="open-menu__item">Item</li>
                       </ul>
                     </div>
-                    <div class="open-menu__menu-item catg">Category
+                    <div class="open-menu__menu-item catg plus">Category
                       <ul class="open-menu__list">
                         <li class="open-menu__item">Item</li>
                         <li class="open-menu__item">Item</li>
@@ -50,7 +53,7 @@ const modalMenu = `<div class="open-menu">
                         <li class="open-menu__item">Item</li>
                       </ul>
                     </div>
-                    <div class="open-menu__menu-item looks">Looks
+                    <div class="open-menu__menu-item looks plus">Looks
                       <ul class="open-menu__list">
                         <li class="open-menu__item">Item</li>
                         <li class="open-menu__item">Item</li>
@@ -58,7 +61,7 @@ const modalMenu = `<div class="open-menu">
                         <li class="open-menu__item">Item</li>
                       </ul>
                     </div>
-                    <div class="open-menu__menu-item contato">Contato
+                    <div class="open-menu__menu-item contato plus">Contato
                       <ul class="open-menu__list">
                         <li class="open-menu__item">Item</li>
                         <li class="open-menu__item">Item</li>
@@ -79,6 +82,12 @@ const cartItems = `<div class="open-cart__item">
                           <i class="fas fa-times"></i>
                         </button>
                       </div>
+                    </div>
+                    <div class="open-cart__detail-middle">
+                      <label class="check-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
                     </div>
                     <div class="open-cart__detail-bottom">
                       <div class="open-cart__item-quntity">
@@ -106,6 +115,12 @@ const cartItems = `<div class="open-cart__item">
                           <i class="fas fa-times"></i>
                         </button>
                       </div>
+                    </div>
+                    <div class="open-cart__detail-middle">
+                      <label class="check-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
                     </div>
                     <div class="open-cart__detail-bottom">
                       <div class="open-cart__item-quntity">
@@ -146,7 +161,7 @@ const modalCart = `<div class="open-cart">
                     </div>
                   </div>`;
 
-function ininMobileSliders () {
+const ininMobileSliders = () => {
   $('.main-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -208,14 +223,14 @@ function ininMobileSliders () {
   });
 }
 
-function destroyMobileSliders () {
+const destroyMobileSliders = () => {
   $('.main-slider').on('destroy', (event, slick) => {});
   $('.promo-slider').on('destroy', (event, slick) => {});
   $('.instagram-slider').on('destroy', (event, slick) => {});
   $('.quem-usa-slider').on('destroy', (event, slick) => {});
 }
 
-function initTabletSliders () {
+const initTabletSliders = () => {
   $('.main-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -242,7 +257,7 @@ function initTabletSliders () {
   });
 }
 
-function initDesctopSliders () {
+const initDesctopSliders = () => {
   $('.main-slider').slick({
     autoplay: true,
     autoplaySpeed: 5000,
@@ -291,40 +306,65 @@ const openMenu = () => {
         case 'sobre':
           if (target.firstElementChild.classList.contains('show')) {
             target.firstElementChild.classList.remove('show');
+            target.classList.remove('minus');
+            target.classList.add('plus');
+            target.style.paddingBottom = '30px';
           } else {
             target.firstElementChild.classList.add('show');
+            target.classList.remove('plus');
+            target.classList.add('minus');
             target.style.paddingBottom = '0';
           }
           break;
         case 'cols':
           if (target.firstElementChild.classList.contains('show')) {
             target.firstElementChild.classList.remove('show');
+            target.classList.remove('minus');
+            target.classList.add('plus');
+            target.style.paddingBottom = '30px';
           } else {
             target.firstElementChild.classList.add('show');
+            target.classList.remove('plus');
+            target.classList.add('minus');
             target.style.paddingBottom = '0';
           }
           break;
         case 'catg':
           if (target.firstElementChild.classList.contains('show')) {
             target.firstElementChild.classList.remove('show');
+            target.classList.remove('minus');
+            target.classList.add('plus');
+            target.style.paddingBottom = '30px';
           } else {
             target.firstElementChild.classList.add('show');
+            target.classList.remove('plus');
+            target.classList.add('minus');
             target.style.paddingBottom = '0';
           }
           break;
         case 'looks':
           if (target.firstElementChild.classList.contains('show')) {
             target.firstElementChild.classList.remove('show');
+            target.classList.remove('minus');
+            target.classList.add('plus');
+            target.style.paddingBottom = '30px';
           } else {
             target.firstElementChild.classList.add('show');
+            target.classList.remove('plus');
+            target.classList.add('minus');
             target.style.paddingBottom = '0';
           }
           break;
         case 'contato':
           if (target.firstElementChild.classList.contains('show')) {
             target.firstElementChild.classList.remove('show');
+            target.classList.remove('minus');
+            target.classList.add('plus');
+            target.style.paddingBottom = '30px';
           } else {
             target.firstElementChild.classList.add('show');
+            target.classList.remove('plus');
+            target.classList.add('minus');
             target.style.paddingBottom = '0';
           }
           break;
@@ -353,6 +393,19 @@ const openCart = () => {
   });
 }
 
+const sliderRun = (event) => {
+  const target = event.target;
+  if (target.tagName === 'LI') {
+    saleDot.forEach(dot => {
+      dot.classList.remove('active');
+      if (dot.dataset.q === target.dataset.q) {
+        dot.classList.add('active');
+        saleSliderDiscr.textContent = saleDiscrValues[Number(target.dataset.q)];
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth < 768 || window.outerWidth < 768) {
     ininMobileSliders();
@@ -367,4 +420,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   menuBtn.addEventListener('click', openMenu);
   cartBtn.addEventListener('click', openCart);
+  saleDots.addEventListener('click', sliderRun);
 });
