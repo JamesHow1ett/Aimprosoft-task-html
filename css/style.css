@@ -636,7 +636,7 @@ body {
           justify-content: flex-start;
   min-height: 195px;
   padding: 10px 13px;
-  background-image: url("/images/header-bg.png");
+  background-image: url("../images/header-bg.png");
   background-size: cover;
   background-position: center center;
 }
@@ -749,7 +749,7 @@ body {
     grid-row: 2/3;
   }
   .main-slider__bg-image {
-    background-image: url("/images/tablet/header-bg-t.png") !important;
+    background-image: url("../images/tablet/header-bg-t.png") !important;
     padding: 20px 50px !important;
     min-height: 440px !important;
   }
@@ -846,7 +846,7 @@ body {
             justify-content: center;
   }
   .main-slider__bg-image {
-    background-image: url("/images/header-bg.png") !important;
+    background-image: url("../images/header-bg.png") !important;
     background-size: contain !important;
     min-height: 705px !important;
     padding: 30px 360px !important;
@@ -1121,14 +1121,14 @@ body {
 }
 
 .arrow-prev {
-  background-image: url("../../images/tablet/chevron-r.png");
+  background-image: url("../images/tablet/chevron-r.png");
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   margin-right: 10px;
 }
 
 .arrow-next {
-  background-image: url("../../images/tablet/chevron-r.png");
+  background-image: url("../images/tablet/chevron-r.png");
   margin-left: 10px;
 }
 
@@ -2088,7 +2088,7 @@ body {
 
 .open-menu__menu-item.plus::after {
   position: absolute;
-  content: url("../../images/plus.png");
+  content: url("../images/plus.png");
   height: 13px;
   width: 13px;
   right: 25px;
@@ -2096,7 +2096,7 @@ body {
 
 .open-menu__menu-item.minus::before {
   position: absolute;
-  content: url("../../images/minus.png");
+  content: url("../images/minus.png");
   height: 13px;
   width: 13px;
   right: 25px;
@@ -2129,7 +2129,7 @@ body {
 
 .open-menu__item::after {
   position: absolute;
-  content: url("../../images/chevron-r.png");
+  content: url("../images/chevron-r.png");
   height: 12px;
   width: 12px;
   right: 25px;
@@ -2352,7 +2352,7 @@ body {
 
 .open-cart__checkout::after {
   position: absolute;
-  content: url("../../images/chevron-r.png");
+  content: url("../images/chevron-r.png");
   right: 25px;
   top: 22px;
 }

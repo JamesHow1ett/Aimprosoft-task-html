@@ -125,7 +125,7 @@ body {
       justify-content: flex-start;
       min-height: 195px;
       padding: 10px 13px;
-      background-image: url('/images/header-bg.png');
+      background-image: url('../images/header-bg.png');
       background-size: cover;
       background-position: center center;
     }
@@ -230,7 +230,7 @@ body {
 
   .main-slider {
     &__bg-image {
-      background-image: url('/images/tablet/header-bg-t.png') !important;
+      background-image: url('../images/tablet/header-bg-t.png') !important;
       padding: 20px 50px !important;
       min-height: 440px !important;
     }
@@ -331,7 +331,7 @@ body {
     // bottom: 30px !important;
 
     &__bg-image {
-      background-image: url('/images/header-bg.png') !important;
+      background-image: url('../images/header-bg.png') !important;
       background-size: contain !important;
       min-height: 705px !important;
       padding: 30px 360px !important;

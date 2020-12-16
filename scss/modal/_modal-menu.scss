@@ -110,7 +110,7 @@
     &.plus {
       &::after {
         position: absolute;
-        content: url('../../images/plus.png');
+        content: url('../images/plus.png');
         height: 13px;
         width: 13px;
         right: 25px;
@@ -120,7 +120,7 @@
     &.minus {
       &::before {
         position: absolute;
-        content: url('../../images/minus.png');
+        content: url('../images/minus.png');
         height: 13px;
         width: 13px;
         right: 25px;
@@ -154,7 +154,7 @@
 
     &::after {
       position: absolute;
-      content: url('../../images/chevron-r.png');
+      content: url('../images/chevron-r.png');
       height: 12px;
       width: 12px;
       right: 25px;
